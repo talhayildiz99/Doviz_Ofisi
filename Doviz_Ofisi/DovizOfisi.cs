@@ -60,7 +60,26 @@ namespace Doviz_Ofisi
         private void BtnSatisYap_Click(object sender, EventArgs e)
         {
             double kur, miktar, tutar;
+            kur = Convert.ToDouble(TxtKur.Text);
+            miktar = Convert.ToDouble(TxtMiktar.Text);
+            tutar = kur * miktar;
+            TxtTutar.Text = tutar.ToString();
+        }
 
+        private void TxtKur_TextChanged(object sender, EventArgs e)
+        {
+            TxtKur.Text = TxtKur.Text.Replace(".",",");
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            double kur = Convert.ToDouble(TxtKur.Text);
+            int miktar = Convert.ToInt32(TxtMiktar.Text);
+            int tutar = Convert.ToInt32(miktar / kur);
+            TxtTutar.Text = tutar.ToString();
+            double kalan;
+            kalan = miktar % kur;
+            TxtKalan.Text = kalan.ToString();
         }
     }
 }

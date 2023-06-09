@@ -51,6 +51,7 @@
             this.BtnEuroSat = new System.Windows.Forms.Button();
             this.BtnEuroAl = new System.Windows.Forms.Button();
             this.BtnDolarSat = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -144,11 +145,11 @@
             // 
             // BtnSatisYap
             // 
-            this.BtnSatisYap.Location = new System.Drawing.Point(136, 249);
+            this.BtnSatisYap.Location = new System.Drawing.Point(118, 240);
             this.BtnSatisYap.Name = "BtnSatisYap";
-            this.BtnSatisYap.Size = new System.Drawing.Size(116, 38);
+            this.BtnSatisYap.Size = new System.Drawing.Size(116, 60);
             this.BtnSatisYap.TabIndex = 8;
-            this.BtnSatisYap.Text = "Satış Yap";
+            this.BtnSatisYap.Text = "Tutar Hesapla";
             this.BtnSatisYap.UseVisualStyleBackColor = true;
             this.BtnSatisYap.Click += new System.EventHandler(this.BtnSatisYap_Click);
             // 
@@ -166,6 +167,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.TxtKalan);
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.TxtTutar);
@@ -241,6 +243,7 @@
             this.TxtKur.Name = "TxtKur";
             this.TxtKur.Size = new System.Drawing.Size(212, 30);
             this.TxtKur.TabIndex = 10;
+            this.TxtKur.TextChanged += new System.EventHandler(this.TxtKur_TextChanged);
             // 
             // BtnDolarAl
             // 
@@ -281,6 +284,16 @@
             this.BtnDolarSat.Text = "...";
             this.BtnDolarSat.UseVisualStyleBackColor = true;
             this.BtnDolarSat.Click += new System.EventHandler(this.BtnDolarSat_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(254, 240);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(114, 60);
+            this.button1.TabIndex = 17;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // DovizOfisi
             // 
@@ -340,6 +353,7 @@
         private System.Windows.Forms.Button BtnEuroSat;
         private System.Windows.Forms.Button BtnEuroAl;
         private System.Windows.Forms.Button BtnDolarSat;
+        private System.Windows.Forms.Button button1;
     }
 }
 
